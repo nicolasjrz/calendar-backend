@@ -80,7 +80,7 @@ const revalidarToken = async (req, res = response) => {
   ///generar nuevo token
   const token = await generateJWT(uid, name);
 
-  res.json({ ok: true, token });
+  res.json({ ok: true, iud, name, token });
 };
 
 module.exports = { crearUsuario, loginUsuario, revalidarToken };
