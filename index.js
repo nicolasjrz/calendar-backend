@@ -21,7 +21,7 @@ app.use(cors());
 
 app.use(express.json());
 
-//rutas
+//rutass
 
 app.use("/api/auth", require("./routes/auth"));
 
