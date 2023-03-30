@@ -21,14 +21,16 @@ app.use(cors());
 
 app.use(express.json());
 
-/// directorio publicoPORT=4000
-app.use(express.static("public"));
-
 //rutass
 
 app.use("/api/auth", require("./routes/auth"));
 
 app.use("/api/event", require("./routes/events"));
+
+/// directorio publicoPORT=4000
+app.use(express.static("public"));
+
+///acomoda el url para
 
 app.get("*", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
